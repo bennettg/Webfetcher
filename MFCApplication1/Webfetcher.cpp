@@ -37,8 +37,6 @@ string Webfetcher::getExePath() {
 void Webfetcher::downloadFromURL(CString web_address, CString file_name)
 {
 
-	//string putURL = "http://google.com";
-	//string putFile = "C:\\Users\\gibsoben000\\WFDownloads\\Google.html";
 
 	CT2CA pszWA(web_address.GetString());
 	CT2CA pszFN(file_name.GetString());
@@ -72,11 +70,8 @@ void Webfetcher::downloadFromURL(CString web_address, CString file_name)
 	else 
 	{
 
-		//CString currentDirectory(this->getExePath().c_str());
-
 		CString boxMessage = _T("Downloaded: ") + web_address;
 
-		//putFN = this->getExePath()+ "\\WFDownloads\\" + putFN;
 		AfxMessageBox(boxMessage.GetString(), MB_OK | MB_ICONINFORMATION);
 
 		HRESULT hr = URLDownloadToFileA(NULL,
