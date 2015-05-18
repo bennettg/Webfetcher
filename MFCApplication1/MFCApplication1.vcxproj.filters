@@ -39,7 +39,10 @@
     <ClInclude Include="HelpDialog.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="HFColoredText.h">
+    <ClInclude Include="StringGrabber.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MultiStringGrabber.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -59,10 +62,13 @@
     <ClCompile Include="HelpDialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="HFColoredText.cpp">
+    <ClCompile Include="functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="functions.cpp">
+    <ClCompile Include="StringGrabber.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MultiStringGrabber.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
