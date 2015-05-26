@@ -1,0 +1,11 @@
+Use of Constants: Yes - using #define to make preprocessor functions and for strings used throughout the code, see bottom of stdafx.h
+Use of Variables: Yes - lots of them
+Use of Arrays: Yes - I used a vector to store the comma delimited urls,files
+Use of Methods: Yes - I use lots of methods mostly in classes, but 1 or 2 outside (see see functions.cpp)
+Use of Classes: Yes - I use many classes see Webfetcher.h,Webfetcher.cpp and all of the Application dialogs
+Use of Inheritance: No
+Use of Loops: Yes - to loop through the vectors that would store multiple files/urls to download them for each element (if more than one exists)
+Use of Conditional Statements: Yes
+Use of Method Overloading: No
+
+Thank you!

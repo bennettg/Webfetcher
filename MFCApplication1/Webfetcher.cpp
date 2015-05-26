@@ -37,7 +37,6 @@ string Webfetcher::getExePath() {
 void Webfetcher::downloadFromURL(CString web_address, CString file_name)
 {
 
-
 	CT2CA pszWA(web_address.GetString());
 	CT2CA pszFN(file_name.GetString());
 	string putURL(pszWA);
@@ -57,7 +56,7 @@ void Webfetcher::downloadFromURL(CString web_address, CString file_name)
 
 		for (std::vector<string>::size_type i = 0; i != urls.size(); i++) {
 
-			CString boxMessage = _T("Downloaded: ") + (CString)urls[i].c_str();
+			CString boxMessage = _T(STR_DOWNLOADED) + (CString)urls[i].c_str();
 			AfxMessageBox(boxMessage.GetString(), MB_OK | MB_ICONINFORMATION);
 
 			HRESULT hr = URLDownloadToFileA(NULL,
@@ -69,8 +68,7 @@ void Webfetcher::downloadFromURL(CString web_address, CString file_name)
 	}
 	else 
 	{
-
-		CString boxMessage = _T("Downloaded: ") + web_address;
+		CString boxMessage = _T(STR_DOWNLOADED) + web_address;
 
 		AfxMessageBox(boxMessage.GetString(), MB_OK | MB_ICONINFORMATION);
 

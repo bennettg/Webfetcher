@@ -13,10 +13,6 @@
 
 #define _ATL_CSTRING_EXPLICIT_CONSTRUCTORS      // some CString constructors will be explicit
 #define _CRT_SECURE_NO_WARNINGS
-
-
-#define STR_ERR_ENTER_URL "You need to enter a URL and File to save the content in."
-
 // turns off MFC's hiding of some common and often safely ignored warning messages
 #define _AFX_ALL_WARNINGS
 
@@ -61,9 +57,10 @@
 #include <utility>
 
 #include "Webfetcher.h"
-#include "StringGrabber.h"
-#include "MultiStringGrabber.h"
 
 #define NoticeMessageBox(a,b) MessageBox(a,b,_T("Notice:"),MB_ICONWARNING);
 #define ErrorMessageBox(a,b) MessageBox(a,b,_T("Error:"),MB_ICONWARNING);
+#define STR_ERR_ENTER_URL "You need to enter a URL and File to save the content in."
+#define STR_DOWNLOADED "Downloaded File: "
+
 std::vector<std::string> explode(std::string const & s, char delim);
