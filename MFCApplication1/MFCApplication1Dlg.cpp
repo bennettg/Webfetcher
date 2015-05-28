@@ -59,6 +59,7 @@ void CWebfetcherDlg::DoDataExchange(CDataExchange* pDX)
 	DDX_Control(pDX, IDC_BUTTON1, DownloadButton);
 	DDX_Control(pDX, IDC_EDIT1, UrlBox);
 	DDX_Control(pDX, IDC_EDIT2, NameBox);
+	DDX_Control(pDX, IDC_CHECK1, CheckboxDownloadImage);
 }
 
 BEGIN_MESSAGE_MAP(CWebfetcherDlg, CDialogEx)
@@ -69,6 +70,7 @@ BEGIN_MESSAGE_MAP(CWebfetcherDlg, CDialogEx)
 	ON_BN_CLICKED(IDC_BUTTON1, &CWebfetcherDlg::OnBnClickedDButton)
 	ON_EN_CHANGE(IDC_EDIT2, &CWebfetcherDlg::OnEnChangeNameEdit)
 	ON_BN_CLICKED(IDC_BUTTON2, &CWebfetcherDlg::OnBnClickedHelpButton)
+	ON_BN_CLICKED(IDC_CHECK1, &CWebfetcherDlg::OnBnClickedCheck1)
 END_MESSAGE_MAP()
 
 
@@ -169,7 +171,6 @@ void CWebfetcherDlg::OnEnChangeNameEdit()
 
 void CWebfetcherDlg::OnBnClickedDButton()
 {
-	Webfetcher wf;
 
 	CString urlAddress;
 	CString fileName;
@@ -177,11 +178,17 @@ void CWebfetcherDlg::OnBnClickedDButton()
 	GetDlgItemText(IDC_EDIT1, urlAddress);
 	GetDlgItemText(IDC_EDIT2, fileName);
 
-	wf.downloadFromURL(urlAddress, fileName);
+	if (CheckboxDownloadImage.GetCheck() == BST_CHECKED)
+	{
+		Imagefetcher ifet;
+		ifet.downloadFromURL(urlAddress, fileName);
+	}
+	else
+	{
+		Webfetcher wf;
+		wf.downloadFromURL(urlAddress, fileName);
+	}
 
-	//string fn = (string)fileName;
-	//MessageBox(finalData, _T("The button worked."), MB_ICONWARNING);
-	//AfxMessageBox(urlAddress.GetString(), MB_OK | MB_ICONSTOP);
 }
 
 
@@ -192,5 +199,11 @@ void CWebfetcherDlg::OnBnClickedHelpButton()
 	CHelpDialog Dlg;
 
 	Dlg.DoModal();
+	// TODO: Add your control notification handler code here
+}
+
+
+void CWebfetcherDlg::OnBnClickedCheck1()
+{
 	// TODO: Add your control notification handler code here
 }

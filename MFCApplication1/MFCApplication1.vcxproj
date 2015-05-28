@@ -107,6 +107,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="HelpDialog.h" />
+    <ClInclude Include="Imagefetcher.h" />
     <ClInclude Include="MFCApplication1.h" />
     <ClInclude Include="MFCApplication1Dlg.h" />
     <ClInclude Include="Resource.h" />
@@ -117,6 +118,7 @@
   <ItemGroup>
     <ClCompile Include="functions.cpp" />
     <ClCompile Include="HelpDialog.cpp" />
+    <ClCompile Include="Imagefetcher.cpp" />
     <ClCompile Include="MFCApplication1.cpp" />
     <ClCompile Include="MFCApplication1Dlg.cpp" />
     <ClCompile Include="stdafx.cpp">
@@ -139,9 +141,11 @@
     <Image Include="..\..\..\..\webfetcher-logo.bmp" />
     <Image Include="..\..\..\..\webfetcher-logo.ico" />
     <Image Include="..\..\..\..\webfetcher-logo.png" />
+    <Image Include="bitmap1.bmp" />
     <Image Include="res\icon1.ico" />
     <Image Include="res\MFCApplication1.ico" />
     <Image Include="res\png2.png" />
+    <Image Include="webfetcher-logo.bmp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -80,3 +80,42 @@ void Webfetcher::downloadFromURL(CString web_address, CString file_name)
 	}
 
 }
+
+
+/*======================================================================
+'downloadFromURL'
+
+Accepts 2 vectors, the web_address and the file_name which can contain
+multiple url and file name items. (an alternative to the regular method
+which figures this out on it's own)
+
+Returns nothing
+========================================================================*/
+
+void Webfetcher::downloadFromURL(std::vector<string> urls, std::vector<string> files)
+{
+
+	//check for the delimiters: , to download multiple urls/files
+	if (urls.size() > 0) {
+
+		for (std::vector<string>::size_type i = 0; i != urls.size(); i++) {
+
+			CString boxMessage = _T(STR_DOWNLOADED) + (CString)urls[i].c_str();
+			AfxMessageBox(boxMessage.GetString(), MB_OK | MB_ICONINFORMATION);
+
+			HRESULT hr = URLDownloadToFileA(NULL,
+				(LPCSTR)urls[i].c_str(),
+				(LPCSTR)files[i].c_str(),
+				0,
+				NULL);
+		}
+	}
+	else
+	{
+		CString boxMessage = _T("No urls present");
+
+		AfxMessageBox(boxMessage.GetString(), MB_OK | MB_ICONINFORMATION);
+	}
+
+}
+

@@ -40,4 +40,6 @@ public:
 	CStatic m_BmpStatic;
 	CBitmap m_Bitmap;
 	afx_msg void OnBnClickedHelpButton();
+	afx_msg void OnBnClickedCheck1();
+	CButton CheckboxDownloadImage;
 };

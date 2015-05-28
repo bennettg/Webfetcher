@@ -39,6 +39,9 @@
     <ClInclude Include="HelpDialog.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Imagefetcher.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MFCApplication1.cpp">
@@ -57,6 +60,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Imagefetcher.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -99,6 +105,12 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="..\..\..\..\bitmap1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="bitmap1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="webfetcher-logo.bmp">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

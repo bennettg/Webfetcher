@@ -57,6 +57,7 @@
 #include <utility>
 
 #include "Webfetcher.h"
+#include "Imagefetcher.h"
 
 #define NoticeMessageBox(a,b) MessageBox(a,b,_T("Notice:"),MB_ICONWARNING);
 #define ErrorMessageBox(a,b) MessageBox(a,b,_T("Error:"),MB_ICONWARNING);
