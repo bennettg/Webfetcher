@@ -8,6 +8,5 @@ using namespace std;
 class Imagefetcher : Webfetcher {
 
 public:
-	virtual void downloadFromURL(CString, CString);
-	string getExePath();
+	void downloadFromURL(CString, CString);
 };
